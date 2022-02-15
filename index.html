@@ -1,176 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
-  <title>Frontend Mentor | Profile card component</title>
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-
-    @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap');
-
-    * {
-      font-family: 'Kumbh Sans', sans-serif;
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+    *{
+      font-family: 'Josefin Sans', sans-serif;
       margin: 0;
       padding: 0;
-
     }
-
-    
-
-    body {
-      background-color: hsl(185, 75%, 39%);
-      /* background-repeat:no-repeat; */
-      }
-
-    .container {
-      box-shadow: 0px 5px 40px rgba(0,0,0,0.5);
-      background-color: white;
-      width: 375px;
-      border-radius: 15px;
+    body{
       display: flex;
-      flex-direction: column;
-      margin: 25vh auto;
       justify-content: center;
       align-items: center;
-      min-width: 250px;
-      transition: all ease 1s;
+      padding: 0;
+      margin: 0;
+      width: 100%;
     }
-
-.intro{
-  margin-bottom: 50px;
-
-}
-    .name {
-      font-size: 18px;
-      font-weight: 700;
-      padding: 10px;
-    }
-
-    .place {
-      color: hsl(0, 0%, 59%);
-      font-weight: 400;
-      padding: auto;
-      text-align: center;
-    }
-
-hr{
-opacity: 0.4;
-  width: 100%;
-}
-    .insta {
-
-      width: 80%;
-      padding: 25px;
+    .container{
+      width: 100%;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
+      flex-direction: row;
     }
 
-.bg{
+    .txt_part{
+      width: 800px;
+      padding: 50px 80px 30px 40px;
+      display: flex;
+      flex-direction: column;
+      background-repeat: no-repeat;
+      background-size:cover;
+      justify-content: space-evenly;
+      background-image: url('images/bg-pattern-desktop.svg');
+      height: 100vh;
+    }
+    #head{
+      padding-bottom: 20px;
+      letter-spacing: 15px;
+      font-size: 4.5rem !important;
+      font-weight: 500 !important;
+      text-transform: uppercase;
+    }
+    #span{
+      font-weight: 100 !important;
+      color: hsl(0, 36%, 70%);
+    }
+    #para{
+      line-height: 30px;
+      color: hsl(0, 36%, 70%);
+      font-size: 1rem !important;
+    }
+
+.img_part{
+  width: 50%;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: contain;
-  border-radius: 15px;
+  height: auto;
+  background-image: url('images/hero-desktop.jpg');
+}
+.email{
   width: 100%;
-  margin-bottom: 0px;
-  padding-top: 70px;
-  background-image: url('images/bg-pattern-card.svg');
+  display:flex;
+  overflow: hidden;
+
+  
+}
+.email input{
+  border-radius: 50px 0 0 50px;
+  padding: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 75%;
+  font-size: 1rem;
+  border: 1.5px solid hsl(0, 36%, 70%);
+  /* height: 40px; */
+  /* z-index: 1; */
 }
 
+.email button{
+  overflow:auto;
+  cursor: pointer;
+  width: 100px;
+  /* padding: 12px; */
+  /* margin-top: -1px; */
+  border-radius: 0px 50px 50px 0;
+  border: 1.5px solid hsl(0, 36%, 70%);
+  background-image: linear-gradient(135deg,hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+  font-size: 1.5rem;
+  color: white;
+  z-index: 2;
+  box-shadow: 0px 0px 15px hsl(0, 80%, 86%);
+  
+}
 .img{
-  position:relative;
-  margin: 20px 35%;
-  align-items: center;
-  width: 50%;
+display: none;
+}
+@media(max-width: 375px){
+  body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  .container{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+  }
+.logo{
+  order: 1;
+  padding: 25px;
+}
+.logo img{
+  height: 20px;
+}
+.txt_part{
+  /* width: 90vw; */
+  padding: 0px;
+  margin: 0;
+}
 
+.content{
+  padding: 10px;
+  order: 3;
+}
+#head{
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 2.5rem !important;
+}
+#para{
+  font-size: small !important;
+  text-align: center;
+}
+.email{
+  order: 4;
+  width: 75%;
+  height: 40px;
+  margin: 0 auto;
+}
+.img{
+  display: block;
+  order: 2;
 }
 .img img{
-  
-  border: 5px solid white;
+  width: 100%;
+  height: auto;
 }
-
-.container:hover{
-  cursor: pointer;
-  box-shadow: none;
-transform:scale(0.90) translateY(3px);
+.img_part{
+  display: none;
 }
-
-
+}
   </style>
 </head>
-
 <body>
-
-
-  <div class="container">
-    <div class="bg">
-      <div class="img">
-        <img src="images/image-victor.jpg" style="border-radius: 50px;" alt="">
-      </div>
+<div class="container">
+  <div class="txt_part">
+    <div class="logo">
+        <img src="images/logo.svg" alt="">
     </div>
-    <div class="intro">
-      <div class="name">
-        Victor Crest &nbsp; <span style="font-weight: 400; color: hsl(0, 0%, 59%);">26</span>
-      </div>
-      <div class="place">
-        London
-      </div>
-
+    <div class="img">
+      <img src="images/hero-mobile.jpg" alt="">
     </div>
-
-    <hr>
-
-    <div class="insta">
-
-      <div class="align">
-        <div class="name">
-          80K
-        </div>
-        <div class="place">
-          Followers
-        </div>
-      </div>
-
-      <div class="align">
-        <div class="name">
-          803K
-        </div>
-        <div class="place">
-          Likes
-        </div>
-      </div>
-
-      <div class="align">
-        <div class="name">
-          1.4K
-        </div>
-        <div class="place">
-          Photos
-        </div>
-      </div>
-
+    <div class="content">
+      <p id="head"><span id="span">We're</span> <br>coming<br>
+ soon<p>
+      <p id="para"> Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
     </div>
-
-
+    <div class="email">
+      <input type="email" name="" id="email" placeholder="Email Address"><button>></button>
+    </div>
   </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Arpit Alkari</a>.
+
+  <div class="img_part">
+    
   </div>
+</div>
+
+
+
+
+
+
+
+
+
+  
+ 
+
+  
 </body>
-
 </html>
